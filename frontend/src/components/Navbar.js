@@ -21,13 +21,12 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           {/* Logo and Brand */}
           <div className="flex-shrink-0 flex items-center">
-            <a href="/" className="flex items-center space-x-2">
+            <a href="/" className="flex items-center transform transition-transform duration-300 hover:scale-105">
               <img
-                className="h-8 w-auto"
+                className="h-10 w-auto filter drop-shadow-lg"
                 src="/logo.svg"
                 alt="AG1 Logo"
               />
-              <span className="text-white font-bold text-xl">AG1</span>
             </a>
           </div>
 

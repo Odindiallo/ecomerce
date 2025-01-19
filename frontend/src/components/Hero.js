@@ -187,84 +187,129 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Trust Badges */}
-            <div className="pt-6 border-t border-gray-800">
-              <p className="text-sm text-gray-400 mb-4">Trusted By Athletes & Health Professionals:</p>
-              <div className="flex items-center space-x-8">
-                <img src="/nsf-certified.svg" alt="NSF Certified" className="h-16 opacity-80 hover:opacity-100 transition" />
-                <img src="/gmp-certified.svg" alt="GMP Certified" className="h-16 opacity-80 hover:opacity-100 transition" />
-                <img src="/vegan.svg" alt="Vegan" className="h-16 opacity-80 hover:opacity-100 transition" />
+            {/* Trust Indicators Section */}
+            <div className="w-full max-w-2xl mx-auto px-4 mt-8 sm:mt-12 border-t border-gray-800 pt-8">
+              <h3 className="text-center text-lg sm:text-xl text-gray-200 mb-8">
+                Trusted By Athletes & Health Professionals
+              </h3>
+              
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
+                {/* GMP Certification */}
+                <div className="flex flex-col items-center space-y-3 group cursor-pointer">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-white/5 rounded-full flex items-center justify-center 
+                              transition-all duration-500 ease-in-out
+                              group-hover:scale-110 group-hover:bg-green-500 group-hover:shadow-lg group-hover:shadow-green-500/30
+                              relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <span className="text-xl font-bold text-green-500 transition-all duration-500 group-hover:text-white relative z-10">GMP</span>
+                  </div>
+                  <span className="text-sm text-gray-400 font-medium group-hover:text-white transition-all duration-500">GMP Certified</span>
+                </div>
+
+                {/* NSF Certification */}
+                <div className="flex flex-col items-center space-y-3 group cursor-pointer">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-white/5 rounded-full flex items-center justify-center 
+                              transition-all duration-500 ease-in-out
+                              group-hover:scale-110 group-hover:bg-green-500 group-hover:shadow-lg group-hover:shadow-green-500/30
+                              relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <span className="text-xl font-bold text-green-500 transition-all duration-500 group-hover:text-white relative z-10">NSF</span>
+                  </div>
+                  <span className="text-sm text-gray-400 font-medium group-hover:text-white transition-all duration-500">NSF Certified</span>
+                </div>
+
+                {/* FDA Registered */}
+                <div className="flex flex-col items-center space-y-3 group cursor-pointer">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-white/5 rounded-full flex items-center justify-center 
+                              transition-all duration-500 ease-in-out
+                              group-hover:scale-110 group-hover:bg-green-500 group-hover:shadow-lg group-hover:shadow-green-500/30
+                              relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <span className="text-xl font-bold text-green-500 transition-all duration-500 group-hover:text-white relative z-10">FDA</span>
+                  </div>
+                  <span className="text-sm text-gray-400 font-medium group-hover:text-white transition-all duration-500">FDA Registered</span>
+                </div>
+
+                {/* Lab Tested */}
+                <div className="flex flex-col items-center space-y-3 group cursor-pointer">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 bg-white/5 rounded-full flex items-center justify-center 
+                              transition-all duration-500 ease-in-out
+                              group-hover:scale-110 group-hover:bg-green-500 group-hover:shadow-lg group-hover:shadow-green-500/30
+                              relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <svg className="w-10 h-10 text-green-500 transition-all duration-500 group-hover:text-white relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                    </svg>
+                  </div>
+                  <span className="text-sm text-gray-400 font-medium group-hover:text-white transition-all duration-500">Lab Tested</span>
+                </div>
               </div>
             </div>
+
+            {/* Floating Reviews section continues... */}
           </div>
 
           {/* Right Column - Product Image & Social Proof */}
-          <div className="relative">
+          <div className="relative flex flex-col items-center">
             {/* Main Product Image */}
-            <div className="relative group">
+            <div className="relative group px-4 md:px-0 -mt-8 sm:-mt-16 md:-mt-20 lg:-mt-28 xl:-mt-32">
+              {/* Outer glow effect */}
               <div className="absolute -inset-4 bg-green-500/20 rounded-full blur-3xl transition-all group-hover:bg-green-500/30"></div>
-              <img
-                src="/product-image.svg"
-                alt="AG1 Athletic Greens Product"
-                className="relative w-full h-auto max-w-lg mx-auto transform transition duration-500 group-hover:scale-105"
-              />
+              
+              {/* Circular container with border */}
+              <div className="relative aspect-square w-[280px] sm:w-[350px] md:w-[400px] lg:w-[450px] xl:w-[600px] mx-auto rounded-full overflow-hidden 
+                            border-4 border-green-500/20 shadow-2xl shadow-green-500/20
+                            transform transition-all duration-500 group-hover:scale-105
+                            hover:border-green-500/30 hover:shadow-green-500/30">
+                {/* Inner glow */}
+                <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-transparent"></div>
+                
+                {/* Image */}
+                <img
+                  src="/greee01.jpg"
+                  alt="Daily Greens Product"
+                  className="w-full h-full object-cover object-center"
+                  style={{
+                    transform: 'scale(1.1)'
+                  }}
+                />
+                
+                {/* Overlay gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-green-900/20 to-transparent"></div>
+              </div>
             </div>
             
-            {/* Floating Reviews */}
-            <div className="absolute top-10 right-0 bg-[#0f3528] p-4 rounded-xl shadow-xl max-w-xs animate-float hover:scale-105 transition">
-              <div className="flex items-center space-x-1 text-green-500 mb-2">
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
-              </div>
-              <p className="text-sm text-gray-300">"Incredible results! More energy, better focus, and improved recovery."</p>
-              <div className="flex items-center mt-3">
-                <img
-                  src="https://randomuser.me/api/portraits/men/1.jpg"
-                  alt="Customer"
-                  className="w-8 h-8 rounded-full mr-2"
-                />
-                <div>
-                  <p className="text-sm font-medium">Michael R.</p>
-                  <p className="text-xs text-gray-400">Professional Athlete</p>
+            {/* Floating Reviews - Optimized spacing for different screens */}
+            <div className="w-full max-w-md mx-auto mt-16 sm:mt-20 md:mt-28 lg:mt-32 xl:mt-40 space-y-4 sm:space-y-6 md:space-y-8 px-4">
+              {/* First Review */}
+              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 shadow-lg transform hover:scale-105 transition-all duration-300">
+                <p className="text-gray-200 mb-2">"Incredible results! More energy, better focus, and improved recovery."</p>
+                <div className="flex items-center">
+                  <img
+                    src="https://randomuser.me/api/portraits/men/1.jpg"
+                    alt="Customer"
+                    className="w-10 h-10 rounded-full mr-3"
+                  />
+                  <div>
+                    <p className="text-white font-medium">Michael R.</p>
+                    <p className="text-gray-400 text-sm">Professional Athlete</p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className="absolute bottom-10 left-0 bg-[#0f3528] p-4 rounded-xl shadow-xl max-w-xs animate-float-delayed hover:scale-105 transition">
-              <div className="flex items-center space-x-1 text-green-500 mb-2">
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
-              </div>
-              <p className="text-sm text-gray-300">"Finally found my daily nutrition solution. Worth every penny!"</p>
-              <div className="flex items-center mt-3">
-                <img
-                  src="https://randomuser.me/api/portraits/women/2.jpg"
-                  alt="Customer"
-                  className="w-8 h-8 rounded-full mr-2"
-                />
-                <div>
-                  <p className="text-sm font-medium">Sarah L.</p>
-                  <p className="text-xs text-gray-400">Verified Buyer • 6 months</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Stats Card */}
-            <div className="absolute -bottom-4 right-4 bg-[#0f3528] p-4 rounded-xl shadow-xl hover:scale-105 transition">
-              <div className="flex items-center space-x-6">
-                <div className="text-center">
-                  <p className="text-3xl font-bold text-green-500">300k+</p>
-                  <p className="text-sm text-gray-400">Happy Customers</p>
-                </div>
-                <div className="text-center">
-                  <p className="text-3xl font-bold text-green-500">4.9</p>
-                  <p className="text-sm text-gray-400">Avg. Rating</p>
+              {/* Second Review */}
+              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 shadow-lg transform hover:scale-105 transition-all duration-300">
+                <p className="text-gray-200 mb-2">"Finally found my daily nutrition solution. Worth every penny!"</p>
+                <div className="flex items-center">
+                  <img
+                    src="https://randomuser.me/api/portraits/women/2.jpg"
+                    alt="Customer"
+                    className="w-10 h-10 rounded-full mr-3"
+                  />
+                  <div>
+                    <p className="text-white font-medium">Sarah L.</p>
+                    <p className="text-gray-400 text-sm">Verified Buyer • 6 months</p>
+                  </div>
                 </div>
               </div>
             </div>
