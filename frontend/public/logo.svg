@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="40" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+  <text x="10" y="30" font-family="Arial" font-size="24" font-weight="bold" fill="currentColor">AG1</text>
+  <path d="M90 20 C90 10, 100 10, 100 20" stroke="currentColor" fill="none" stroke-width="2"/>
+</svg>
